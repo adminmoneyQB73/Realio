@@ -31,13 +31,15 @@ echo "export REALIO_PORT="23"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-# download binary
+**download binary**
+```
 cd $HOME
 rm -rf realio-network
 git clone https://github.com/realiotech/realio-network.git
 cd realio-network
 git checkout v1.0.2
 make install
+```
 
 # config and init app
 realio-networkd config node tcp://localhost:${REALIO_PORT}657
