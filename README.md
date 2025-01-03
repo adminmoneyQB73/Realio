@@ -41,11 +41,13 @@ git checkout v1.0.2
 make install
 ```
 
-# config and init app
+**config and init app**
+```
 realio-networkd config node tcp://localhost:${REALIO_PORT}657
 realio-networkd config keyring-backend os
 realio-networkd config chain-id realionetwork_3301-1
 realio-networkd init "test" --chain-id realionetwork_3301-1
+```
 
 # download genesis and addrbook
 wget -O $HOME/.realio-network/config/genesis.json https://server-2.itrocket.net/mainnet/realio/genesis.json
