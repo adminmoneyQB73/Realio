@@ -49,9 +49,11 @@ realio-networkd config chain-id realionetwork_3301-1
 realio-networkd init "test" --chain-id realionetwork_3301-1
 ```
 
-# download genesis and addrbook
+**download genesis and addrbook**
+```
 wget -O $HOME/.realio-network/config/genesis.json https://server-2.itrocket.net/mainnet/realio/genesis.json
 wget -O $HOME/.realio-network/config/addrbook.json  https://server-2.itrocket.net/mainnet/realio/addrbook.json
+```
 
 # set seeds and peers
 SEEDS="a5039f260cd848facfbe7fbe62bf3e8adfce9c98@realio-mainnet-seed.itrocket.net:23656"
