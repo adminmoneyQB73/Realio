@@ -55,12 +55,13 @@ wget -O $HOME/.realio-network/config/genesis.json https://server-2.itrocket.net/
 wget -O $HOME/.realio-network/config/addrbook.json  https://server-2.itrocket.net/mainnet/realio/addrbook.json
 ```
 
-# set seeds and peers
+**set seeds and peers**
+```
 SEEDS="a5039f260cd848facfbe7fbe62bf3e8adfce9c98@realio-mainnet-seed.itrocket.net:23656"
 PEERS="2815cc1437461f808a7f022c0df679fa27918dbc@realio-mainnet-peer.itrocket.net:23656,7eabd881aeda0d4ebba22bd9d5adf79cbe5ab1eb@159.89.224.12:46656,271f194229b4ee9be89777daa3ef8201553865cc@65.108.232.168:36656,41d4a00a29c34a3e5e8084d6edff5be4f53389ab@65.109.18.169:12056,92bd4dd1784f4a7860a2b0d2a5bc8f16d9e5edaa@65.109.103.177:37656,944bc1fd43690447dd500065ad4eb272cfbfefd3@144.76.155.11:23656,56971ee9336dda008d64c3997207eac8e441c3ef@95.216.12.106:21096,32c0e5b5e341e7d68c16377f65c05c1734846a55@65.108.230.113:21096,6f5d99fac932cf4c01a3e408c5f3c1ad57ea507b@138.68.175.105:26656,ae925f32ead79c394bb7f6f8abb5345f7a16b064@167.235.102.45:16656,1f64a6df3783cb10e5bbc67db3bed7aee57f2988@65.21.136.219:21096"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.realio-network/config/config.toml
-
+```
 # set custom ports in app.toml
 sed -i.bak -e "s%:1317%:${REALIO_PORT}317%g;
 s%:8080%:${REALIO_PORT}080%g;
