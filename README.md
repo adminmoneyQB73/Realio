@@ -62,7 +62,8 @@ PEERS="2815cc1437461f808a7f022c0df679fa27918dbc@realio-mainnet-peer.itrocket.net
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.realio-network/config/config.toml
 ```
-# set custom ports in app.toml
+**set custom ports in app.toml**
+```
 sed -i.bak -e "s%:1317%:${REALIO_PORT}317%g;
 s%:8080%:${REALIO_PORT}080%g;
 s%:9090%:${REALIO_PORT}090%g;
@@ -70,6 +71,7 @@ s%:9091%:${REALIO_PORT}091%g;
 s%:8545%:${REALIO_PORT}545%g;
 s%:8546%:${REALIO_PORT}546%g;
 s%:6065%:${REALIO_PORT}065%g" $HOME/.realio-network/config/app.toml
+```
 
 # set custom ports in config.toml file
 sed -i.bak -e "s%:26658%:${REALIO_PORT}658%g;
