@@ -115,13 +115,15 @@ WantedBy=multi-user.target
 EOF
 ```
 
-# reset and download snapshot
+**reset and download snapshot**
+```
 realio-networkd tendermint unsafe-reset-all --home $HOME/.realio-network
 if curl -s --head curl https://server-2.itrocket.net/mainnet/realio/realio_2024-12-29_10366132_snap.tar.lz4 | head -n 1 | grep "200" > /dev/null; then
   curl https://server-2.itrocket.net/mainnet/realio/realio_2024-12-29_10366132_snap.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.realio-network
     else
   echo "no snapshot found"
 fi
+```
 
 # enable and start service
 sudo systemctl daemon-reload
