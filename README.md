@@ -125,7 +125,8 @@ if curl -s --head curl https://server-2.itrocket.net/mainnet/realio/realio_2024-
 fi
 ```
 
-# enable and start service
+**enable and start service**
+```
 sudo systemctl daemon-reload
 sudo systemctl enable realio-networkd
 sudo systemctl restart realio-networkd && sudo journalctl -u realio-networkd -fo cat
@@ -133,7 +134,10 @@ Automatic Installation
 pruning: custom: 100/0/19 | indexer: null
 
 source <(curl -s https://itrocket.net/api/mainnet/realio/autoinstall/)
+```
+
 Create wallet
+
 # to create a new wallet, use the following command. don’t forget to save the mnemonic
 realio-networkd keys add $WALLET
 
