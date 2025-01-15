@@ -138,8 +138,10 @@ source <(curl -s https://itrocket.net/api/mainnet/realio/autoinstall/)
 
 Create wallet
 
-# to create a new wallet, use the following command. don’t forget to save the mnemonic
+**to create a new wallet, use the following command. don’t forget to save the mnemonic**
+```
 realio-networkd keys add $WALLET
+```
 
 # to restore exexuting wallet, use the following command
 realio-networkd keys add $WALLET --recover
