@@ -143,8 +143,10 @@ Create wallet
 realio-networkd keys add $WALLET
 ```
 
-# to restore exexuting wallet, use the following command
+**to restore exexuting wallet, use the following command**
+```
 realio-networkd keys add $WALLET --recover
+```
 
 # save wallet and validator address
 WALLET_ADDRESS=$(realio-networkd keys show $WALLET -a)
