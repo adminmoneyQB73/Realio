@@ -162,7 +162,8 @@ source $HOME/.bash_profile
 realio-networkd status 2>&1 | jq 
 ```
 
-# before creating a validator, you need to fund your wallet and check balance
+**before creating a validator, you need to fund your wallet and check balance**
+```
 realio-networkd query bank balances $WALLET_ADDRESS 
 Node Sync Status Checker
 #!/bin/bash
@@ -186,6 +187,8 @@ while true; do
 
   sleep 5
 done
+```
+
 Create validator
 Moniker
 Identity
