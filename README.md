@@ -189,20 +189,8 @@ while true; do
 done
 ```
 
-Create validator
-Moniker
-Identity
-Details
-I love blockchain ❤️
-Amount, ario
-1000000
-Commission rate
-0.1
-Commission max rate
-0.2
-Commission max change rate
-0.01
-Website
+**Create validator**
+```
 realio-networkd tx staking create-validator \
 --amount 1000000ario \
 --from $WALLET \
@@ -218,6 +206,8 @@ realio-networkd tx staking create-validator \
 --chain-id realionetwork_3301-1 \
  --gas auto --gas-adjustment 1.3 --fees 300000000ario \
 -y
+```
+
 Monitoring
 If you want to have set up a monitoring and alert system use our cosmos nodes monitoring guide with tenderduty
 
