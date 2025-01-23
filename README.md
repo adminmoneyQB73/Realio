@@ -227,10 +227,12 @@ sudo ufw allow ${REALIO_PORT}656/tcp
 sudo ufw enable
 ```
 
-Delete node
+**Delete node**
+```
 sudo systemctl stop realio-networkd
 sudo systemctl disable realio-networkd
 sudo rm -rf /etc/systemd/system/realio-networkd.service
 sudo rm $(which realio-networkd)
 sudo rm -rf $HOME/.realio-network
 sed -i "/REALIO_/d" $HOME/.bash_profile
+```
